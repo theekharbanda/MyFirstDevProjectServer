@@ -29,6 +29,7 @@ const database = knex ({
 app.use(bodyParser.json());
 app.use(cors());
 
+app.post('/',(req,res)=>{res.json("You Have Entered a Root Server")});
 
 app.post ('/signin',(req,res) =>{signin.handleSignin(req,res,database,bcrypt)});
 
