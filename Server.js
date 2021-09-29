@@ -40,6 +40,6 @@ app.get('/profile/:id',(req,res)=>{profile.handleProfileGet(req,res,database)});
 app.put('/image/:id',(req,res)=>{image.handleImage(req,res,database)});
 
 
-app.listen (3000, ()=>{
-    console.log('app is running on port ');
+app.listen (process.env.PORT || 3000, ()=>{
+    console.log('app is running on the port ');
 });
